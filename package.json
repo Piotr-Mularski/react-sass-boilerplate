@@ -1,0 +1,58 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "0.5.1",
+  "description": "a simple webpack boilerplate for react and sass",
+  "main": "app.js",
+  "repository": "https://PiotrMularski@bitbucket.org/PiotrMularski/webpack-boilerplate.git",
+  "author": "Piotrek <piomul6473@gmail.com>",
+  "license": "free",
+    "engines": {
+    "node": "8.10.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "ie > 9"
+  ],
+  "devDependencies": {
+    "autoprefixer": "8.1.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-stage-1": "6.24.1",
+    "css-loader": "0.28.7",
+    "file-loader": "1.1.6",
+    "node-sass": "4.7.2",
+    "postcss-loader": "2.1.1",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.1",
+    "url-loader": "0.6.2",
+    "webpack-dev-server": "2.9.7",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "eslint": "5.7.0"
+  },
+  "scripts": {
+    "start:dev": "webpack-dev-server --open --watch --config ./webpack-dev.config.js",
+    "start": "node server/server.js",
+    "build": "webpack --config ./webpack-prod.config.js",
+    "heroku-postbuild": "yarn run build"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "4.3.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "html-webpack-plugin": "2.30.1",
+    "clean-webpack-plugin": "0.1.18",
+    "uglifyjs-webpack-plugin": "1.1.4",
+    "webpack": "3.10.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "express": "4.16.3",
+    "normalize.css": "8.0.0"
+  }
+}
