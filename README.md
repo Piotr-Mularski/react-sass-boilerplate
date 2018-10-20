@@ -10,6 +10,6 @@ To install all necessary dependencies, simply use your favourite package install
 
 ## Demo Page
 
-This repo has a small demo page with some content [here]().
+This repo has a small demo page with some content [here](https://piotr-mularski.github.io/webpack-boilerplate/).
 
 Have fun :) 
