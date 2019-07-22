@@ -19,7 +19,7 @@ module.exports = {
 		vendor: VENDOR_LIBS
 	},
 	output: {
-		path: path.join(__dirname, '/docs'),
+		path: path.join(__dirname, '/dist'),
 		publicPath: '/',
 		filename: '[name].[chunkhash].js'
 	},
@@ -59,7 +59,7 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			names: ['vendor', 'manifest']
 		}),
-		new CleanWebpackPlugin(['docs']),
+		new CleanWebpackPlugin(['dist']),
 		new UglifyJsPlugin(),
 		new HtmlWebpackPlugin({ template: path.join(__dirname, '/src/index.html') }),
 		new ExtractTextPlugin('[name].css')
