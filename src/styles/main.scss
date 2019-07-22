@@ -1,18 +1,20 @@
 $cyberpunk: #00ff9f;
 $hopbush: #c69;
-$monoton: "Monoton", Arial, sans-serif;
+$monoton: 'Monoton', Arial, sans-serif;
 $reactive: #00d8ff;
-$rambla: "Rambla", Helvetica, sans-serif;
+$rambla: 'Rambla', Helvetica, sans-serif;
 
 @import '~normalize.css';
 @import 'mixins';
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 body {
@@ -67,26 +69,34 @@ header {
 	}
 
 	@include mobile {
-		font-size: .9rem;
+		font-size: 0.9rem;
 	}
 }
 
 code {
 	background-color: #2e293a;
-	border-radius: .25rem;
-	font-size: .95rem;
+	border-radius: 0.25rem;
+	font-size: 0.95rem;
 	padding: 0.2rem 0.4rem;
 
 	@include mobile {
 		border-radius: 4px;
-		font-size: .8rem; 
-		padding: .1rem .2rem;
+		font-size: 0.8rem;
+		padding: 0.1rem 0.2rem;
 	}
 }
 
 footer {
 	text-align: center;
 	@include mobile {
-		font-size: .8rem;
+		font-size: 0.8rem;
+	}
+}
+
+a {
+	color: $reactive;
+	text-decoration: none;
+	&:hover {
+		color: $cyberpunk;
 	}
 }

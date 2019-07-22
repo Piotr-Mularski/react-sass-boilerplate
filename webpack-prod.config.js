@@ -19,7 +19,7 @@ module.exports = {
 		vendor: VENDOR_LIBS
 	},
 	output: {
-		path: path.join(__dirname, '/dist'),
+		path: path.join(__dirname, '/docs'),
 		publicPath: '/',
 		filename: '[name].[chunkhash].js'
 	},
@@ -51,17 +51,18 @@ module.exports = {
 					limit: 1,
 					name: './assets/images/[name].[ext]'
 				}
-			}]
+			}
+		]
 	},
 	devtool: 'source-maps',
 	plugins: [
-			new webpack.optimize.CommonsChunkPlugin({
-			  names: ['vendor', 'manifest']
-			}),
-			new CleanWebpackPlugin(['dist']),
-			new UglifyJsPlugin(),
-			new HtmlWebpackPlugin({ template: path.join(__dirname, '/src/index.html') }),
-			new ExtractTextPlugin('[name].css'),
-			// new CopyWebpackPlugin([{ from: path.join(__dirname, '/src/img'), to: 'assets/images' }])
-		]
+		new webpack.optimize.CommonsChunkPlugin({
+			names: ['vendor', 'manifest']
+		}),
+		new CleanWebpackPlugin(['docs']),
+		new UglifyJsPlugin(),
+		new HtmlWebpackPlugin({ template: path.join(__dirname, '/src/index.html') }),
+		new ExtractTextPlugin('[name].css')
+		// new CopyWebpackPlugin([{ from: path.join(__dirname, '/src/img'), to: 'assets/images' }])
+	]
 };
